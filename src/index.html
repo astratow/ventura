@@ -3,8 +3,12 @@
 	<head>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 	  <link href="./output.css" rel="stylesheet">
 	   <style>
+
 		    .carousel {
 		      /*display: flex;*/
 /*		      overflow-x: scroll;*/
@@ -14,12 +18,12 @@
 		    .carousel::-webkit-scrollbar {
 		      display: none; /* Chrome, Safari */
 		    }
-		    .carousel-item {
+		    /*.carousel-item {
 		      scroll-snap-align: start;
-		    }
+		    }*/
   		</style>
 	</head>
-	<body class="font-plus-jakarta-sans bg-gray-100">
+	<body class="font-plus-jakarta bg-gray-100">
 
 	  <!-- Header -->
 	  <section class="container mx-auto px-4 py-8">
@@ -28,34 +32,34 @@
 	    </h2>
 
 	    <!-- Carousel Container -->
-	    <div class="carousel snap-mandatory mt-6 flex flex-row overflow-x-scroll flex-nowrap space-x-[20px] md:space-x-[18px]">
-	      <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	    <div class="carousel h-96 snap-mandatory mt-6 flex flex-grow flex-row overflow-x-scroll overflow-y-none flex-nowrap space-x-[20px] md:space-x-[18px]">
+	      <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 1</p>
 	      </div>
 	      <!-- Repeat this block for more cards -->
-	      <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	      <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 2</p>
 	      </div>
 
-	       <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	       <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 3</p>
 	      </div>
 
-	       <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	       <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 4</p>
 	      </div>
 
-	       <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	       <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 5</p>
 	      </div>
 
-	       <div class="carousel-item flex-none" style="width: 237px; min-width: 237px; height: 290px; border-radius: 6px;">
-	        <img src="./img/image.png" alt="Card Image" class="w-full h-full rounded-[6px] object-cover">
+	       <div class="carousel-item snap-start flex-none hover:scale-95" >
+	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
 	        <p class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 6</p>
 	      </div>
 	    </div>
@@ -69,7 +73,6 @@
       let scrollLeft;
 
       carousel.addEventListener('mousedown', (e) => {
-      	console.log('mousedown event triggered');
         isDown = true;
         carousel.classList.add('active');
         startX = e.pageX - carousel.offsetLeft;
@@ -93,6 +96,23 @@
         const walk = (x - startX) * 2; // scroll-fast multiplier
         carousel.scrollLeft = scrollLeft - walk;
       });
+
+      carousel.addEventListener('touchstart', (e) => {
+			  isDown = true;
+			  startX = e.touches[0].pageX - carousel.offsetLeft;
+			  scrollLeft = carousel.scrollLeft;
+			});
+
+			carousel.addEventListener('touchmove', (e) => {
+			  if (!isDown) return;
+			  const x = e.touches[0].pageX - carousel.offsetLeft;
+			  const walk = (x - startX) * 2;
+			  carousel.scrollLeft = scrollLeft - walk;
+			});
+
+			carousel.addEventListener('touchend', () => {
+			  isDown = false;
+			});
     });
   </script>
 	</body>

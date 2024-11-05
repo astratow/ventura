@@ -26,94 +26,100 @@
 	<body class="font-plus-jakarta bg-gray-100">
 
 	  <!-- Header -->
-	  <section class="container mx-auto px-4 py-8">
-	    <h2 class="text-[28px] leading-[35px] font-bold text-left md:text-[32px] md:leading-[40px]">
-	      Section Title
-	    </h2>
+		<section class="container mx-auto px-4 py-8">
+			<h2 class="text-[28px] leading-[35px] font-bold text-left md:text-[32px] md:leading-[40px]">
+			Section Title
+			</h2>
 
-	    <!-- Carousel Container -->
-	    <div class="carousel h-96 snap-mandatory mt-6 flex flex-grow flex-row overflow-x-scroll overflow-y-none flex-nowrap space-x-[20px] md:space-x-[18px]">
-	      <div class="carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out" >
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 1</h3>
-	      </div>
-	      
-	      <div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 2</h3>
-	      </div>
+			<!-- Carousel Container -->
+			<div class="carousel h-96 snap-mandatory mt-6 flex flex-grow flex-row overflow-x-scroll scroll-smooth overscroll-none overflow-y-none flex-nowrap space-x-[20px] md:space-x-[18px]">
+				<div class="carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out" >
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 1</h3>
+				</div>
+				
+				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 2</h3>
+				</div>
 
-	       <div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 3</h3>
-	      </div>
+				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 3</h3>
+				</div>
 
-	       <div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 4</h3>
-	      </div>
+				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 4</h3>
+				</div>
 
-	       <div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 5</h3>
-	      </div>
+				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 5</h3>
+				</div>
 
-	       <div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-	        <img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover">
-	        <h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 6</h3>
-	      </div>
-	    </div>
-	  </section>
-	    <script>
-    // JavaScript to add carousel behavior
-    document.addEventListener('DOMContentLoaded', () => {
-		const carousel = document.querySelector('.carousel');
-		let isDown = false;
-		let startX;
-		let scrollLeft;
+				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 6</h3>
+				</div>
+			</div>
+		</section>
+		<script>
+		  document.addEventListener('DOMContentLoaded', () => {
+			const carousel = document.querySelector('.carousel');
+			let isDown = false;
+			let startX;
+			let scrollLeft;
 
-		carousel.addEventListener('mousedown', (e) => {
+			// Prevent image dragging
+			// document.querySelectorAll('.carousel-item img').forEach((img) => {
+			// img.addEventListener('dragstart', (e) => e.preventDefault());
+			// });
+
+			carousel.addEventListener('mousedown', (e) => {
 			isDown = true;
 			carousel.classList.add('active');
 			startX = e.pageX - carousel.offsetLeft;
 			scrollLeft = carousel.scrollLeft;
-		});
+			e.preventDefault(); // Prevent text selection
+			});
 
-		carousel.addEventListener('mouseleave', () => {
+			carousel.addEventListener('mouseleave', () => {
 			isDown = false;
 			carousel.classList.remove('active');
-		});
+			});
 
-		carousel.addEventListener('mouseup', () => {
+			carousel.addEventListener('mouseup', () => {
 			isDown = false;
 			carousel.classList.remove('active');
-		});
+			});
 
-		carousel.addEventListener('mousemove', (e) => {
+			carousel.addEventListener('mousemove', (e) => {
 			if (!isDown) return;
 			e.preventDefault();
 			const x = e.pageX - carousel.offsetLeft;
-			const walk = (x - startX) * 2; // scroll-fast multiplier
+			const walk = (x - startX) * 1.5; // Adjust multiplier for smoother drag
 			carousel.scrollLeft = scrollLeft - walk;
-		});
+			});
 
-		carousel.addEventListener('touchstart', (e) => {
-				isDown = true;
-				startX = e.touches[0].pageX - carousel.offsetLeft;
-				scrollLeft = carousel.scrollLeft;
-				});
+			// Mobile touch handling
+			carousel.addEventListener('touchstart', (e) => {
+			isDown = true;
+			startX = e.touches[0].pageX - carousel.offsetLeft;
+			scrollLeft = carousel.scrollLeft;
+			});
 
-		carousel.addEventListener('touchmove', (e) => {
+			carousel.addEventListener('touchmove', (e) => {
 			if (!isDown) return;
 			const x = e.touches[0].pageX - carousel.offsetLeft;
-			const walk = (x - startX) * 2;
+			const walk = (x - startX) * 1.5; // Adjust multiplier for smoother drag
 			carousel.scrollLeft = scrollLeft - walk;
-		});
+			});
 
-		carousel.addEventListener('touchend', () => {
+			carousel.addEventListener('touchend', () => {
 			isDown = false;
+			});
 		});
-    });
-  </script>
+	</script>
 	</body>
 </html>

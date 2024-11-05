@@ -651,6 +651,14 @@ video {
   overflow-x: scroll;
 }
 
+.overscroll-none {
+  overscroll-behavior: none;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .rounded-\[6px\] {
   border-radius: 6px;
 }

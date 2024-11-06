@@ -1,6 +1,6 @@
 # Carousel Project
 
-A responsive, draggable carousel component with smooth scrolling for both desktop and mobile devices. The carousel supports unlimited blocks, scales the image on hover, displays a central arrow, and aligns with the left edge of the container by default. Each card is clickable and fully interactive.
+A responsive, draggable carousel component with smooth scrolling for both desktop and mobile devices. The carousel supports unlimited blocks, scales the image on hover, displays an arrow, and aligns with the left edge of the container by default. Each card is clickable and fully interactive.
 
 ## Features
 

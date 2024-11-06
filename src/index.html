@@ -10,17 +10,12 @@
 	   <style>
 
 		    .carousel {
-		      /*display: flex;*/
-/*		      overflow-x: scroll;*/
-/*		      scroll-snap-type: x mandatory;*/
 		      scrollbar-width: none; /* Firefox */
 		    }
 		    .carousel::-webkit-scrollbar {
 		      display: none; /* Chrome, Safari */
 		    }
-		    /*.carousel-item {
-		      scroll-snap-align: start;
-		    }*/
+
   		</style>
 	</head>
 	<body class="font-plus-jakarta bg-gray-100">
@@ -32,36 +27,54 @@
 			</h2>
 
 			<!-- Carousel Container -->
-			<div class="carousel h-96 snap-mandatory mt-6 flex flex-grow flex-row overflow-x-scroll scroll-smooth overscroll-none overflow-y-none flex-nowrap space-x-[20px] md:space-x-[18px]">
-				<div class="carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out" >
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+			<div class="carousel relative h-96 snap-mandatory mt-6 flex flex-grow flex-row overflow-x-scroll scroll-smooth overscroll-none overflow-y-none flex-nowrap space-x-[20px] md:space-x-[18px]">
+				<a href="#" class="carousel-item snap-start flex-none group" >
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 1</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 				
-				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+				<a href="#" class="carousel-item snap-start flex-none group ">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 2</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 
-				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+				<a href="#" class="carousel-item snap-start flex-none group ">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 3</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 
-				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+				<a href="#" class="carousel-item snap-start flex-none group ">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 4</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 
-				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+				<a href="#" class="carousel-item snap-start flex-none group ">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 5</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 
-				<div class= "carousel-item snap-start flex-none hover:scale-95 duration-700 ease-out">
-					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover" draggable="false">
+				<a href="#" class="carousel-item snap-start flex-none group ">
+					<img src="./img/image.png" alt="Card Image" class="w-[237px] h-[290px] rounded-[6px] object-cover hover:scale-105 duration-300 ease-in-out" draggable="false">
 					<h3 class="mt-4 text-[18px] leading-[23px] font-medium text-left">Title 6</h3>
-				</div>
+					<div class="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+						<span class="arrow-icon text-3xl">→</span> 
+					</div>
+				</a>
 			</div>
 		</section>
 		<script>
@@ -70,11 +83,6 @@
 			let isDown = false;
 			let startX;
 			let scrollLeft;
-
-			// Prevent image dragging
-			// document.querySelectorAll('.carousel-item img').forEach((img) => {
-			// img.addEventListener('dragstart', (e) => e.preventDefault());
-			// });
 
 			carousel.addEventListener('mousedown', (e) => {
 			isDown = true;

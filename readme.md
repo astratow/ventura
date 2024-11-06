@@ -2,6 +2,10 @@
 
 A responsive, draggable carousel component with smooth scrolling for both desktop and mobile devices. The carousel supports unlimited blocks, scales the image on hover, displays an arrow, and aligns with the left edge of the container by default. Each card is clickable and fully interactive.
 
+## Live Demo
+
+Check out the live project here: [ventura-open.netlify.app](https://ventura-open.netlify.app)
+
 ## Features
 
 - **Responsive Design**: Works seamlessly across desktop and mobile devices.
